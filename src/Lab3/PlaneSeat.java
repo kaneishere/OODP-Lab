@@ -3,7 +3,7 @@ package Lab3;
 public class PlaneSeat {
     private int seatId;
     private boolean assigned = false;
-    private int customerId;
+    private int customerId = -1;
 
     public PlaneSeat(int seatId) {
         this.seatId = seatId;
@@ -28,5 +28,6 @@ public class PlaneSeat {
 
     public void unAssign() {
         assigned = false;
+        customerId = -1;
     }
 }
