@@ -4,11 +4,15 @@ import java.util.Scanner;
 
 public class P2 {
     public static void main(String[] args) {
+    	int salary;
+    	int points;
         Scanner scanner  = new Scanner(System.in);
+        
         System.out.println("Enter the salary: ");
-        int salary = scanner.nextInt();
+        salary = scanner.nextInt();
         System.out.println("Enter the points: ");
-        int points = scanner.nextInt();
+        
+        points = scanner.nextInt();
         char grade;
         if(salary>=800 && salary<=899) grade = 'A';
 
@@ -31,6 +35,6 @@ public class P2 {
 
         System.out.println("Grade " + grade);
 
-
+        
     }
 }
