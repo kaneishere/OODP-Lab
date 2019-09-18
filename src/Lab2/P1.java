@@ -50,7 +50,9 @@ public class P1{
                     break;
                 case 6: /* add extractOddDigits() call */
                     System.out.println("Enter a number ");
-                    System.out.printf("oddDigits = %d\n", extractOddDigits(sc.nextLong()));
+                    long extract = sc.nextLong();
+                    if(extract<0) System.out.println("Error input!!");
+                    else System.out.printf("oddDigits = %d\n", extractOddDigits(extract));
                     break;
                 case 7: System.out.println("Program terminating ….");
             }
@@ -72,7 +74,8 @@ public class P1{
 
     public static int divide(int m, int n) {
         int quotient = 0;
-        while(m>n) {
+        if(m < 0) m = -m;
+        while(m>=n) {
             m -= n;
             quotient++;
         }
@@ -108,6 +111,7 @@ public class P1{
     }
 
     public static long extractOddDigits(long n) {
+    
         if(n%2==0) {
             return -1;
         }
